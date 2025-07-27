@@ -1,17 +1,17 @@
 import React from 'react'
 
-export const HomeSectionCard = () => {
+export const HomeSectionCard = ({product}) => {
   return (
-    <div className='cursor-pointer flex flex-col justify-center items-center bg-gray-200 rounded-lg shadow-lg overflow-hidden  w-[13 rem] mx-4'>
-        <div className='w-[13rem] h-[15rem]'>
-            <img className='w-full h-full object-cover' src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/32193132/2025/1/3/8243634c-0c19-4a5a-890e-aa808dbe19e51735884731052CampusSutraMenStripedPoloCollarRawEdgeT-shirt1.jpg" alt="" />
-            
-        </div>
-        <div className='p-5 space-y-2'>
-            <h3 className='text-lg font-semibold font color-black'>Men Striped T-Shirt</h3>
-            <p className='text-sm font-semibold font color-black'>Rs. 1999</p>
-        </div>
-        
+    <div className='cursor-pointer flex flex-col justify-center items-center bg-white hover:bg-gray-100 rounded-lg shadow-lg overflow-hidden  w-[13 rem] mx-1'>
+      <div className='w-[10rem] h-[15rem]'>
+        <img className='w-full h-full object-cover' src={product.imageUrl} alt="" />
+
+      </div>
+      <div className='p-5 space-y-2'>
+        <h3 className='text-lg font-semibold font color-black'>{product.title}</h3>
+        <p className='text-sm font-semibold font color-black'>{product.price}</p>
+      </div>
+
     </div>
   )
 }
